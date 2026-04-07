@@ -94,3 +94,9 @@ poetry export -f requirements.txt --output requirements.txt --without-hashes
 .venv/
 __pycache__/
 *.pyc
+
+
+# DVC Installation and initialization:
+poetry add --group dev dvc
+poetry run dvc init
+git commit -m "Initialize DVC"
