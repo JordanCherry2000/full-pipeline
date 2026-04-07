@@ -96,17 +96,21 @@ __pycache__/
 *.pyc
 
 
-# DVC Installation and initialization:
-poetry add --group dev dvc
-poetry run dvc init
-git commit -m "Initialize DVC"
-mkdir data
-
-drag the csv file into the data folder
-
-poetry run dvc add data/your_file.csv
-
-
 # NBStripout for removing metadata of notebook files
 poetry add --group dev nbstripout
 poetry run nbstripout --install
+
+
+# Create Structure for everything 
+# (data for csv's, notebooks for notebooks, src for final scripts, and tests for Pytest files)
+mkdir data notebooks src tests
+
+
+drag the csv files into the data folder
+
+
+# Install LFS
+brew install git-lfs
+git lfs install
+git lfs track "*.csv"
+git add .gitattributes
