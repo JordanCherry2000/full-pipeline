@@ -1,0 +1,33 @@
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.requires-plugins]
+poetry-plugin-export = ">=1.8"
+
+
+[project]
+name = "full-pipeline"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "JordanCherry2000",email = "jordancherry00@gmail.com"}
+]
+requires-python = ">=3.11"
+dependencies = [
+    "pandas (>=3.0.2,<4.0.0)",
+    "numpy (>=2.4.4,<3.0.0)",
+    "scikit-learn (>=1.8.0,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pre-commit (>=4.5.1,<5.0.0)",
+    "black (>=26.3.1,<27.0.0)",
+    "isort (>=8.0.1,<9.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)"
+]
