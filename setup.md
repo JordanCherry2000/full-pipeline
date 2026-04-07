@@ -100,3 +100,13 @@ __pycache__/
 poetry add --group dev dvc
 poetry run dvc init
 git commit -m "Initialize DVC"
+mkdir data
+
+drag the csv file into the data folder
+
+poetry run dvc add data/your_file.csv
+
+
+# NBStripout for removing metadata of notebook files
+poetry add --group dev nbstripout
+poetry run nbstripout --install
